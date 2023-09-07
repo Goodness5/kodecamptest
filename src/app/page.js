@@ -4,8 +4,8 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="sm:flex-row flex flex-col-reverse bg-[#F9F9F9]">
-      <div className="w-[50%] ml-8">
+    <div className="sm:flex-row flex flex-col bg-[#F9F9F9]">
+      <div className="w-[70%] ml-8">
         <Form />
       </div>
       <div className="w-full">
