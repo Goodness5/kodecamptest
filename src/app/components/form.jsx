@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -129,8 +130,13 @@ const Form = () => {
             accept="image/svg+xml"
             onChange={handleFileChange}
           />
+           <label htmlFor="file" className='bg-white p-2 w-fit px-6 rounded-md' >
+
+<Image src='/upload.svg' alt='icon' width={30} height={30} />
+</label>
+
         </div>
-        <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded">
+        <button type="submit" className="bg-[#335CA6] text-white font-bold py-2 px-4 rounded">
           Submit
         </button>
       </form>
