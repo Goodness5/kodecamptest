@@ -9,7 +9,7 @@ export default function Home() {
         <Form />
       </div>
       <div className="w-full">
-        <div className="relative h-screen">
+        <div className="relative h-full">
           <Image src='/bgimage.svg' alt="bg" layout="fill" objectFit="cover" />
         </div>
       </div>

@@ -60,8 +60,8 @@ const Form = () => {
   return (
     <div className='w-full flex flex-col p-4'>
       <h1 className='font-bold text-[32px]'>Register with us</h1>
-      <p className="font-light">Swap your old laptop for a new one</p>
-      <form onSubmit={handleSubmit}>
+      <p className="font-light text-[16px]">Swap your old laptop for a new one</p>
+      <form onSubmit={handleSubmit} className='mt-6'>
         <div className="mb-4 flex flex-col gap-2 group w-full">
           <label htmlFor="fullname">Full Name</label>
           <input
@@ -115,7 +115,7 @@ const Form = () => {
           <select
             name="laptop"
             id="laptop"
-            className="bg-white p-2 w-[70%] rounded-md"
+            className="bg-white p-2 w-[70%] text-[#B3B3B3] focus:outline-none rounded-md"
             value={formData.laptop}
             onChange={handleChange}
           >
@@ -125,8 +125,8 @@ const Form = () => {
             <option value="macbook">MacBook</option>
           </select>
         </div>
-        <div className="mb-4 flex flex-col gap-2 group w-full">
-          <label htmlFor="receipt">Upload receipt of old laptop</label>
+        <div className="mb-4 flex flex-col gap-2 group w-full  text-[16px] ">
+          <label htmlFor="receipt" className='cursor-pointer'>Upload receipt of old laptop</label>
           <input
             type="file"
             name="receipt"
@@ -135,7 +135,7 @@ const Form = () => {
             accept="image/svg+xml"
             onChange={handleFileChange}
           />
-           <label htmlFor="receipt" className='bg-white p-2 w-fit px-6 rounded-md' >
+           <label htmlFor="receipt" className='bg-white cursor-pointer p-2 w-fit px-6 rounded-md' >
 
 <Image src='/upload.svg' alt='icon' width={30} height={30} />
 </label>
