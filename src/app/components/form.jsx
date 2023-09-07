@@ -24,24 +24,28 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const endpoint = 'https://testbackend-ya01.onrender.com/api/v1/users/register';
-    const { fullname, phone, email, address, laptop } = formData;
-
-    const formData = new FormData();
-    formData.append('fullname', fullname);
-    formData.append('phone', phone);
-    formData.append('email', email);
-    formData.append('address', address);
-    formData.append('laptop', laptop);
-    formData.append('receipt', formData.receipt);
-
+    const { fullname, phone, email, address, laptop, receipt } = formData; // Destructure formData
+  
+    const formDataToSend = new FormData();
+    formDataToSend.append('fullname', fullname);
+    formDataToSend.append('phone', phone);
+    formDataToSend.append('email', email);
+    formDataToSend.append('address', address);
+    formDataToSend.append('laptop', laptop);
+    formDataToSend.append('receipt', receipt);
+  
     try {
       const response = await fetch(endpoint, {
         method: 'POST',
-        body: formData,
+        body: formDataToSend,
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'access-control-allow-credentials': 'true',
+        },
       });
-
+  
       if (response.ok) {
         console.log('Registration successful');
       } else {
@@ -51,6 +55,7 @@ const Form = () => {
       console.error('Error:', error);
     }
   };
+  
 
   return (
     <div className='w-full flex flex-col p-4'>
