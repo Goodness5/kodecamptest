@@ -8,7 +8,7 @@ export default function Home() {
       <div className="w-[50%] ml-8">
         <Form />
       </div>
-      <div className="w-full bg-red-100">
+      <div className="w-full">
         <div className="relative h-screen">
           <Image src='/bgimage.svg' alt="bg" layout="fill" objectFit="cover" />
         </div>
