@@ -132,7 +132,6 @@ const Form = () => {
             name="receipt"
             id="receipt"
             hidden
-            accept="image/svg+xml"
             onChange={handleFileChange}
           />
            <label htmlFor="receipt" className='bg-white cursor-pointer p-2 w-fit px-6 rounded-md' >
